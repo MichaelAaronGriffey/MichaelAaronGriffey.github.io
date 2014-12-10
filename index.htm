@@ -1,9 +1,114 @@
 <!DOCTYPE html>
+
 <html lang="en">
-	<head>
-		<title>MichaelAaronGriffey GitHub</title>
-	</head>
-	<body>
-		<div>Hello</div>
-	</body>
+<head>
+    <title>MichaelAaronGriffey GitHub</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body ng-app="App">
+    <form name="myForm" role="form" ng-controller="AppCtrl">
+        <header>Hello {{user.name}}!</header>
+        <main>
+            <div id="myElement"></div>
+            <img src="img/icons/ic_access_time_24px.svg" />
+            <i class="fa fa-user"></i>
+            <div>
+                <md-content class="buttondemoBasicUsage">
+                    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+                        <md-button>{{title1}}</md-button>
+                        <md-button noink class="md-primary">Primary (noink)</md-button>
+                        <md-button ng-disabled="isDisabled" class="md-primary">Disabled</md-button>
+                        <md-button class="md-warn" ng-click="isDisabled = !isDisabled">{{title4}}</md-button>
+                        <div class="label">flat</div>
+                    </section>
+                    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+                        <md-button class="md-raised">Button</md-button>
+                        <md-button class="md-raised md-primary">Primary</md-button>
+                        <md-button disabled class="md-raised md-primary">Disabled</md-button>
+                        <md-button class="md-raised md-warn">Warn</md-button>
+                        <div class="label">raised</div>
+                    </section>
+                    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+                        <md-button class="md-fab" aria-label="Time">
+                            <md-icon icon="img/icons/ic_access_time_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                        </md-button>
+                        <md-button class="md-fab" aria-label="New document">
+                            <md-icon icon="img/icons/ic_insert_drive_file_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                        </md-button>
+                        <md-button class="md-fab" disabled aria-label="Comment">
+                            <md-icon icon="img/icons/ic_comment_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                        </md-button>
+                        <md-button class="md-fab md-primary" md-theme="cyan" aria-label="Profile">
+                            <md-icon icon="img/icons/ic_people_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                        </md-button>
+                        <md-button class="md-fab md-primary" md-theme="orange" aria-label="Profile">
+                            <md-icon class="fa fa-user" style="width: 24px; height: 24px;"></md-icon>
+                        </md-button>
+                        <div class="label">FAB</div>
+                    </section>
+                    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+                        <md-button ng-href="{{googleUrl}}" target="_blank">Go to Google</md-button>
+                        <md-button>RSVP</md-button>
+                        <div class="label">Button Group</div>
+                    </section>
+                    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+                        <md-button class="md-primary" md-theme="green">Button</md-button>
+                        <md-button class="md-primary md-raised" md-theme="indigo">Button</md-button>
+                        <md-button class="md-primary md-raised" md-theme="orange">Button</md-button>
+                        <md-button class="md-primary" md-theme="cyan">Button</md-button>
+                        <div class="label">Themed</div>
+                    </section>
+                </md-content>
+            </div>
+        </main>
+        <footer></footer>
+    </form>
+    <section id="lib">
+        <!-- Hammer -->
+        <script src="lib/hammer/hammer.min.js"></script>
+
+        <!-- Angular -->
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="lib/angular/angular-animate.js"></script>
+        <script src="lib/angular/angular-aria.min.js"></script>
+        <script src="lib/angular/angular-cookies.min.js"></script>
+        <script src="lib/angular/angular-loader.min.js"></script>
+        <script src="lib/angular/angular-messages.min.js"></script>
+        <script src="lib/angular/angular-resource.min.js"></script>
+        <script src="lib/angular/angular-route.min.js"></script>
+        <script src="lib/angular/angular-sanitize.min.js"></script>
+        <script src="lib/angular/angular-touch.min.js"></script>
+
+        <!-- Angular Material -->
+        <script src="lib/angular.material/angular-material.min.js"></script>
+        <link href="lib/angular.material/angular-material.min.css" rel="stylesheet" />
+        <!-- Angular Material Themes -->
+        <link href="lib/angular.material/themes/amber-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/blue-grey-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/blue-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/brown-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/cyan-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/deep-orange-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/deep-purple-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/green-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/grey-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/indigo-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/light-blue-dark-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/light-green-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/lime-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/orange-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/pink-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/purple-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/red-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/teal-theme.css" rel="stylesheet" />
+        <link href="lib/angular.material/themes/yellow-theme.css" rel="stylesheet" />
+
+        <!-- Font-Awesome -->
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+        <!-- Custom -->
+        <script src="js/app.js"></script>
+        <link href="css/app.css" rel="stylesheet" />
+    </section>
+</body>
 </html>
